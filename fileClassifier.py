@@ -18,6 +18,7 @@ def main():
     xlsx = []
     data = []
     doc = []
+	ppt = []
     for file in fc.get_file():
         for elem in file.split('.'):
             if elem == 'xlsx' or elem == 'xls':
@@ -26,12 +27,17 @@ def main():
                 doc.append(file)
             elif 'data' in elem:
                 data.append(file)
+			elif 'ppt' in elem:
+				ppt.append(file)
     if not os.path.exists(u'测试用例'):
         fc.MkDir(u'测试用例')
     if not os.path.exists(u'测试数据'):
         fc.MkDir(u'测试数据')
     if not os.path.exists(u'文档'):
         fc.MkDir(u'文档')
+    if not os.path.exists(u'分享'):
+        fc.MkDir(u'分享')
+		
     for file in xlsx:
         print(file)
         #shutil.copy(file, u'./测试用例')
@@ -42,9 +48,12 @@ def main():
     for file in doc:
         #shutil.copy(file, u'./文档')
         shutil.move(file, u'./文档')
+	for file in ppt:
+		shutil.move(file, u'./分享')
     print(xlsx)
     print(data)
     print(doc)
+	print(ppt)
 
 if __name__ == '__main__':
     main()
