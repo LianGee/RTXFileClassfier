@@ -1,6 +1,6 @@
 # 陈波
 
-@(我的第一个笔记本)[Java, C++, Python, ML, Shell, Maven, TestNg, git/SVN, Linux]
+@(软件工程)[Java, C++, Python]
 >* 男　　　26岁　　未婚　　1年工作经验　　湖北人现居上海
 >* 联系方式　　15822186658　　bo_bo0425@126.com 
 
