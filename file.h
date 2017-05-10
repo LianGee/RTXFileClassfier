@@ -3,20 +3,29 @@
 //
 #include <string>
 #include <stdio.h>
-#include <io.h>
 #include <sys/stat.h>
 #include <time.h>
 #include <vector>
+#include <set>
+#include <map>
 #include <string.h>
 #include <Windows.h>
 #include <iostream>
+#include <io.h>
+#include <direct.h> //_mkdir函数的头文件
+#include <fstream>
+#include <sstream>
 using namespace std;
 #ifndef RTXFILECLASSFIER_FILE_H
 #define RTXFILECLASSFIER_FILE_H
 class File{
-private:
+public:
     string path;
-    string create_time;
+    tm* create_time;
+    string filename;
+    string Suffix;
+    string firstlayer;
+    string secondlayer;
 };
 
 void getAllFiles(string path, vector<string>& files);
